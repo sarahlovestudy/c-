@@ -1,0 +1,8 @@
+1== 和equals()：
+ ==是比较的栈内的地址的值是否相等；equal()比较的是引用里的值是否相等
+2 typeof 和 GetType
+typeof()是运算符 GetType()是方法
+typeof()获得类型的system.Type对象，GetType()获得当前实例的Type
+typeof()的参数只能是int,string,class,自定义类型，不能是具体实例
+GetType()是基类System.Objet的方法，只有建立了一个实例之后才能被调用
+ 
