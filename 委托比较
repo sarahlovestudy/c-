@@ -1,0 +1,22 @@
+1 使用delegate关键字声明委托
+   public delegate int CalcDelegate(int x,int y);
+   
+2  Action
+   Action:无返回值无参数的委托
+   Action<int,string>:有传入参数int,string但没有返回值
+   public void Calc<T>(Action<T>action, T p)
+   {
+     action(p);
+     // actio?.invoke(p)
+   }
+  3 Func
+    Func<int> :表示无参，返回值为int的委托
+    Func<object,string,int>:表示传入参数为object,string,返回值是Int的委托
+    public int Calc<T1 ,T2>(Func<T1,T2,int>func,T1 a,T2 b)
+    {
+    return func(a,b);
+    }
+  4 predicate
+    返回bool类型的泛型委托
+    predicate<int>:传入参数为Int，返回值一定是bool类型
+    public delegate bool Predicate<T>(T obj)
